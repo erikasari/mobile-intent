@@ -28,4 +28,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    public void handleImplicit(View view) {
+        Intent intent = new Intent(this, ImplicitIntentActivity.class);
+        startActivity(intent);
+    }
 }
