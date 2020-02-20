@@ -1,11 +1,14 @@
+package model;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-public class user implements Parcelable
- {
+public class user implements Parcelable{
+
+
      private String username;
      private String name;
      private int age;
+
 
      public user(String username, String name, int age) {
          this.username = username;
