@@ -11,7 +11,7 @@ public class ProfileParcelableActivity extends AppCompatActivity {
     private TextView usernameText;
     private TextView nameText;
     private TextView ageText;
-    public static final String USER_KEY = "user";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,14 +24,15 @@ public class ProfileParcelableActivity extends AppCompatActivity {
         ageText = findViewById(R.id.text_age);
 
         Bundle extras = getIntent().getExtras();
+        user user = extras.getParcelable("user");
 
 
         if (extras != null) {
             // TODO: display value here
-            user usr = getIntent().getParcelableExtra(USER_KEY);
-            usernameText.setText(usr.getUsername());
-            nameText.setText(usr.getName());
-            ageText.setText(String.valueOf(usr.getAge()));
+
+            usernameText.setText(user.getUsername());
+            nameText.setText(user.getName());
+            ageText.setText(String.valueOf(user.getAge()));
 
 
         }
